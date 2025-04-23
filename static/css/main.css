@@ -706,6 +706,10 @@ h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+strong {
+    font-weight: bold;
+}
+
 #services-content .cs-content{
     display: flex;
     flex-direction: column; /* Keeps rows stacked */
