@@ -3,7 +3,7 @@ from datetime import timedelta
 from flask import Flask, render_template, request, make_response, redirect, session
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY')
+#app.secret_key = os.environ.get('SECRET_KEY')
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 
 
