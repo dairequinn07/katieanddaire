@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+  <title>Katie & Dáire's Wedding</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="/static/site.webmanifest" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="theme-color" content="#2E2760;"/>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height"/>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2E2760" />
+
+ <!-- Google-specific meta tags -->
+  <meta name="google" content="notranslate"> <!-- Prevent translation of the page content -->
+  <meta name="googlebot" content="index, follow"> <!-- Instruct Googlebot to index and follow links -->
+  <!-- Language and Locale Tags -->
+  <meta name="language" content="en">
+  <meta name="country" content="GB">
+
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+<script>
+</script>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>
