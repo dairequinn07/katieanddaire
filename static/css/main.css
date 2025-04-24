@@ -33,6 +33,9 @@ body {
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
 }
+label {
+    color: white;
+}
 .cs-card-group {
     text-align: center;
     margin: 0;
@@ -421,9 +424,9 @@ footer {
     text-decoration: none;
     font-weight: 700;
     margin: 0;
-    color: #fff;
+    color: black;
     padding: 0 1.5rem;
-    background-color: var(--accent);
+    background-color: white;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -432,16 +435,17 @@ footer {
     text-align: center;
   }
   .cs-button-solid:before {
-    content: '';
+    content: 'RSVP';
     position: absolute;
     display: block;
     height: 100%;
     width: 0%;
-    background: #000;
+    background-color: black;
+    color: white;
     opacity: 1;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1000;
     transition: width .3s;
     border-radius: 62px;
   }
@@ -629,10 +633,8 @@ footer {
     z-index: 1;
   }
   #collection-1552 .cs-button-solid:before {
-    content: "";
     width: 0%;
     height: 100%;
-    background: #000;
     opacity: 1;
     position: absolute;
     top: 0;
@@ -866,43 +868,42 @@ ul {
 }
 
 .form {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 0.4em;
-  background-color: var(--secondaryAccent);
-  border-radius: 25px;
-  transition: .4s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 0.4em;
+    background-color: black;
+    border-radius: 25px;
+    border: solid 2px white;
+    transition: .4s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .form:hover {
   transform: scale(1.05);
-  border: 1px solid var(--primary); /* Form border on hover */
 }
 
 #heading {
   text-align: center;
   margin: 2em;
   /* change color potentially */
-  color: var(--background);
+  color: white;
   font-size: 1.5em;
 }
 
 .field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  border-radius: 25px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
-  color: var(--background);
-  background-color: var(--secondaryAccent);
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: var(--background);
+    background-color: white;
 }
 
 .input-field {
@@ -921,7 +922,7 @@ ul {
 }
 
 .input-field::placeholder {
-  color: var(--background);
+  color: grey;
 }
 
 .button3 {
@@ -931,13 +932,13 @@ ul {
   border: none;
   outline: none;
   transition: .4s ease-in-out;
-  background-color: var(--accent); /* Button uses accent */
+  background-color: #4E8575; /* Button uses accent */
   color: var(--textColor);
   font-size: 1.2rem;
 }
 
 .button3:hover {
-  background-color: var(--background);
+  transform: scale(1.2);
 }
 
 .contact-us-page-form{
