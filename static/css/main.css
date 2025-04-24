@@ -887,7 +887,7 @@ ul {
 
 #heading {
   text-align: center;
-  margin: 2em;
+  margin: 1em;
   /* change color potentially */
   color: white;
   font-size: 1.5em;
@@ -918,7 +918,7 @@ ul {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 2.5em;
+  margin-top: 1em;
 }
 
 .input-field::placeholder {
@@ -926,7 +926,7 @@ ul {
 }
 
 .button3 {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   padding: 0.5em;
   border-radius: 5px;
   border: none;
