@@ -48,8 +48,7 @@ def submit_form():
         auth=("api", api_key),
         data={
             "from": "RSVP <postmaster@katieanddaire.com>",
-            "to": [myEmail],
-            "cc": [ccEmail],
+            "to": [myEmail, ccEmail],
             "subject": "Wedding RSVP",
             "html": f'''\
         <html>
