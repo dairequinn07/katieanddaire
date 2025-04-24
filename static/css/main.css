@@ -111,54 +111,6 @@ footer {
   gap: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
-/* for all social containers*/
-.socialContainer {
-  width: 52px;
-  height: 52px;
-  background-color: rgb(44, 44, 44);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: .3s;
-}
-/* instagram*/
-.containerOne:hover {
-  background-color: #d62976;
-  transition-duration: .3s;
-}
-/* twitter*/
-.containerTwo:hover {
-  background-color: #00acee;
-  transition-duration: .3s;
-}
-/* linkdin*/
-.containerThree:hover {
-  background-color: #0072b1;
-  transition-duration: .3s;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
-}
-
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: .3s;
-}
-
-.socialSvg {
-  width: 17px;
-}
-
-.socialSvg path {
-  fill: rgb(255, 255, 255);
-}
-
-.socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
-}
 
 @keyframes slide-in-top {
   0% {
@@ -881,10 +833,6 @@ ul {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.form:hover {
-  transform: scale(1.05);
-}
-
 #heading {
   text-align: center;
   margin: 1em;
@@ -940,47 +888,12 @@ ul {
 .button3:hover {
   transform: scale(1.2);
 }
-
-.contact-us-page-form{
-    width: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact-us-page-form-field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 5px;
-    padding: 1em;
-    border: solid 2px;
-    color: black;
-    width: 100%;
-    background: white;
-}
-.contact-field {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: black;
-}
-.contact-field::placeholder {
-    color: #111111;
-}
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
 iframe{
     width: 600px;
-}
-.contact-us-page-form{
-    padding-left: 20%;
-    padding-right: 20%;
 }
 .footer-container{
     grid-template-columns: repeat(3,0fr);
@@ -1031,10 +944,6 @@ iframe{
 @media only screen and (min-width: 81.25rem) {
 iframe{
     width: 600px;
-}
-.contact-us-page-form{
-    padding-left: 20%;
-    padding-right: 20%;
 }
 .footer-container{
     grid-template-columns: repeat(3,0fr);
