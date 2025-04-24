@@ -506,7 +506,6 @@ footer {
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
     /* makes the top of the image start at the top of the parent */
     object-position: top;
   }
