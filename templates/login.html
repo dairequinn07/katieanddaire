@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+<section id="hero-1947" style="background-color: #ffe2d6;">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2>Katie & Dáire's Wedding – Please Enter Password</h2>
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="post">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+    </div>
+</section>
+<script>
+</script>
+{% endblock %}

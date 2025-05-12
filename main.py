@@ -1,11 +1,12 @@
 import os
 from datetime import timedelta
 import requests
-from flask import Flask, render_template, request, make_response, redirect, session, jsonify
+from flask import Flask, render_template, request, make_response, redirect, session, jsonify, url_for
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
+password = os.environ.get('password')
 
 
 # Step 3: Add HTTPS redirection before any request is processed
@@ -14,6 +15,25 @@ def https_redirect():
     if not request.is_secure and request.headers.get('x-forwarded-proto') != 'https':
         # Redirect HTTP requests to HTTPS
         return redirect(request.url.replace('http://', 'https://', 1), code=301)
+
+
+@app.before_request
+def require_password():
+    allowed_routes = ['login', 'static']  # Allow access to login route without password
+    if 'authenticated' not in session and request.endpoint not in allowed_routes:
+        return redirect(url_for('login'))
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form.get('password') == password:
+            session['authenticated'] = True
+            return redirect(url_for('hello_world'))
+        else:
+            error = 'Incorrect password'
+    return render_template('login.html', error=error)
 
 
 @app.after_request
